@@ -1,0 +1,1898 @@
+@charset "utf-8";
+/* CSS Document */
+
+.hidden {
+  display:none;
+}
+
+.visible {
+  display:block;
+}
+
+.mobileOnly {
+  display:block;
+}
+
+body {
+  position: relative;
+  z-index:-3;
+  background: #fbfcfc; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(52,98,146,.81), rgba(226,154,157,.51)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(52,98,146,.81), rgba(226,154,157,.51)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(52,98,146,.81), rgba(226,154,157,.51)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(52,98,146,.81), rgba(226,154,157,.51)); /* Standard syntax */
+  background-attachment: fixed;
+  background repeat: no-repeat;
+}
+
+/*HOMESCREEN*/
+
+    #movingCloudsTwo {
+      background-image: url("../images/cloudsSmall.svg");
+      background-repeat:repeat-x;
+      position:absolute;
+      height:205px;
+      width:100%;
+      top:120%;
+      opacity: .63;
+      z-index: -2;
+    }
+
+    #movingClouds {
+      background-image: url("../images/clouds.svg");
+      position:absolute;
+      height:605px;
+      width:100%;
+      top:70%;
+      opacity: .63;
+      z-index: -2;
+    }
+
+    #topBar ul {
+      display:none;
+    }
+
+    #siteCon {
+      background-color:#f6f6f6;
+      padding: 34vh 0px 50px 0px;/*trbl*/
+      overflow:hidden;
+    }
+
+    #siteCon h1 {
+      font-size: 1.4em;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #445880;
+      padding: 0px 5%;
+    }
+
+    #siteCon h2 {
+      font-size: 1.500em;
+      font-weight: bold;
+      margin: 25px auto 15px auto;
+      color: #445880;
+      padding: 0px 5%;
+    }
+
+    #siteCon h3 {
+      font-size: 1em;
+      font-weight: bold;
+      color: #445880;
+      padding:0px 5%;
+    }
+
+    #siteCon p {
+      font-size: 0.875em;
+      line-height: 22px;
+      padding: 0px 5%;
+    }
+
+    #siteCon a {
+      color:#9a1e22;
+      text-decoration: underline;
+    }
+
+    #navCon {
+      position:fixed;
+      z-index: 3;
+      top:0;
+      right:0;
+      height:30vh;
+      transition: 1s;
+      width: 100%;
+      border-bottom: solid 5px rgba(68, 88, 128, 0.95);
+      background-color: rgba(232, 232, 232, 0.93);
+    }
+
+    #logo {
+      display:block;
+      height:100%;
+      margin:auto;
+      padding:2% 0px 2% 0px;
+    }
+
+    #mobileNav {
+      position: fixed;
+      top:15px;
+      right:5%;
+      height:auto;
+      width:8%;
+      max-width: 54px;
+      z-index: 3;
+    }
+
+    #dropDown {
+      position:absolute;
+      top:103%;
+      left:0;
+      width:100%;
+      height: 82vh;
+      background-color: rgba(151, 34, 40, .95);
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #fbfcfc;
+      transition: 1.8s;
+    }
+
+    #dropDown ul {
+      position:absolute;
+      height:53%;
+      right: 0;
+      left: 0;
+      top:50%;
+      transform: translateY(-50%);
+      display:flex;
+      flex-direction:column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0px;
+    }
+
+    #dropDown ul li {
+      margin-bottom: 1%;
+      list-style: none;
+    }
+
+    #dropDown ul li a {
+      color: #fbfcfc;
+    }
+
+    #dropDown ul li:hover {
+      cursor: pointer;
+    }
+
+    #navLeft {
+      display: none;
+    }
+
+    #navRight {
+      display: none;
+    }
+
+    #bannerImg {
+      display:none;
+    }
+
+    #videoCon {
+      display:block;
+      position: relative;
+      height:auto;
+      width:100%;
+      max-width: 448px;
+      margin:auto;
+    }
+
+    .video {
+      position: relative;
+      max-width:960px;
+      background-color: rgba(44,44,44,.12);
+      margin: 0 -6%;
+      padding: 0 5%;/*trbl*/
+    }
+
+    .playButton {
+      position: absolute;
+      right: 0;
+      left: 46%;
+      top:50%;
+      transform: translateY(-50%);
+      display:flex;
+      flex-direction:column;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      width:79px;
+      height:79px;
+      padding-top:20px;
+      border-radius: 50%;
+      background-color: rgba(251,252,252,.93);
+    }
+
+    .rightArrow {
+      height: 0;
+      width: 0;
+      position: absolute;
+      top:50%;
+      left:33%;
+      transform: translateY(-50%);
+      display:flex;
+      flex-direction:column;
+      align-items: center;
+      justify-content: center;
+      border-top: 20px solid transparent; /* trbl */
+      border-left: 34px solid #9a1e22;
+      border-bottom: 20px solid transparent;
+    }
+
+    .playButton:hover {
+      cursor: pointer;
+    }
+
+    #welcomePage p {
+      margin-bottom: 25px;
+    }
+
+    #flexCon {
+      padding: 0;
+      margin:auto;
+      list-style: none;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      justify-content: space-around;
+      max-width: 100%;
+    }
+
+    #flexCon img {
+      height: auto;
+      width: 100%;
+    }
+
+    #flexCon li:nth-child(1) {
+      padding-right: 2px;
+    }
+
+    #flexCon li:nth-child(2) {
+      padding-left: 2px;
+    }
+
+    .photos {
+      width:50%;
+    }
+
+    #cottagePhoto {
+      width:100%;
+      height:auto;
+    }
+
+    .divider {
+      height:3px;
+      width:90%;
+      background-color: #323233;
+      margin: 30px auto 0px auto;
+      clear:both;
+    }
+
+    #rates p, h2{
+      margin-bottom:10px;
+    }
+
+    #scheduleButton {
+      position: absolute;
+      top:21%;
+      width:40%;
+      padding:5%;
+      border: none;
+      border-radius: 7px;
+      background-color: #445880;
+      font-size: 1em;
+      text-align: center;
+      color:white;
+    }
+
+    #scheduleButton a {
+      text-decoration: none;
+      color:#fbfcfc;
+    }
+
+    #ratesDivider {
+      position:absolute;
+      left: 50%;
+      border-radius: 1.5px;
+      width: 3px;
+      height:159px;
+      background-color: #2c2c2c;
+      float:left;
+    }
+
+    #callMe {
+      position:absolute;
+      top:17%;
+      left: 60%;
+    }
+
+    #callMe p {
+      text-align: start;
+      font-size:20px;
+      margin-bottom:3px;
+      padding: 0px;
+    }
+
+    #callMe a {
+      text-align: start;
+      font-size: 1em;
+    }
+
+    #bookingSchedule {
+      display:inline-block;
+    }
+
+    #contactArea {
+      position:relative;
+      height:159px;
+      width:90%;
+      padding: 0px;
+      margin:auto;
+    }
+
+    #contact h2 {
+      padding:0 5%;
+    }
+
+    /*Booking page contact section*/
+
+    #bookingRates {
+      width: 52%;
+      float:left;
+    }
+
+    #bookingContactArea {
+      width:48%;
+      float:left;
+    }
+
+
+    #otherSites {
+      background-color: #445880;
+    }
+
+    #otherSites ul {
+      position:relative;
+      z-index:2;
+      margin-top: -73px; /*only works seperated from next next style*/
+      margin-bottom: 0px;
+    }
+
+    #ocean {
+      margin-top: -30px;
+    }
+
+    #desktopOcean {
+      display:none;
+    }
+
+    #frontWaves {
+      display: none;
+    }
+
+    #siteFlexBox {
+      padding: 0;
+      margin:auto;
+      list-style: none;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      justify-content: space-around;
+      width:74%;
+      max-width: 960px;
+    }
+
+    .siteLinks {
+      width: 80px;
+      height: auto;
+    }
+
+    .siteLinks a:hover {
+      cursor: default;
+    }
+
+    .siteLinks p {
+      margin-bottom:30px;
+      font-size:10px;
+      line-height: 12px;
+      color:#fbfcfc;
+      text-align: center;
+    }
+
+      .circle {
+        position:relative;
+        background-color: #9a1e22;
+        height:80px;
+        width:80px;
+        border-radius: 50%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #fbfcfc;
+        margin-bottom:15px;
+      }
+
+      .circle a {
+        color: #fbfcfc;
+      }
+
+      .circle:hover {
+        cursor:pointer;
+      }
+
+      #saugeen {
+        position:absolute;
+        top:33%;
+        left:0;
+        font-size: 12px; /*Saugeen shores*/
+        line-height: 16px;
+      }
+
+      #museum {
+        position: absolute;
+        top:13%;
+        left:0;
+        font-size: 12px; /*Bruce county museum & cultural centre*/
+        line-height: 12px;
+      }
+
+      #lighthouse {
+        position:absolute;
+        top:20%;
+        left:9%;
+        font-size: 10px; /*Bruce coast lighthouse tour*/
+        line-height:12px;
+      }
+
+      #explore {
+        position:absolute;
+        top:22%;
+        left:15%;
+        font-size: 12px; /*Explore the Bruce*/
+        line-height: 16px;
+      }
+
+      #tennis {
+        position:absolute;
+        top:40%;
+        left:8%;
+        font-size: 8px; /*Southhampton tennis club*/
+        line-height: 12px;
+      }
+
+      #boat {
+        display:none;
+      }
+
+      #footerNav {
+        background-color: rgba(44,44,44,.80) ;
+        height:29px;
+        width: 100%;
+        border-top: solid 3px rgba(44,44,44,.95);
+      }
+
+      #footerNav p {
+        margin-bottom:0px;
+        text-align: center;
+        color: #fbfcfc;
+        font-size: 12px;
+        line-height: 26px;
+      }
+
+      #pageLinks {
+        display:none;
+      }
+
+      /* Booking */
+
+      #bookingList ul {
+        list-style: none;
+        padding: 0px 5%;
+      }
+
+      #bookingList ul li {
+        margin-bottom:13px;
+        line-height: 22px;
+      }
+
+      #bookingList ul li::before {
+        content: "⦿"; color: #9a1e22;
+        display: inline-block; width: 1em;
+        margin-left: 0em
+      }
+
+      #bookingList p {
+        font-weight: bold;
+      }
+
+      #monthPicker {
+        width: 25%;
+        background-color: #9a1e22;
+        color:#fbfcfc;
+        float:left;
+        margin-bottom:25px;
+      }
+
+      #monthPicker ul {
+        padding-top:15px;
+        padding-bottom:15px;
+        list-style: none;
+      }
+
+      #monthPicker ul li {
+        text-align: center;
+        line-height:15px;
+        font-size: 9px;
+      }
+
+      .current {
+        font-weight: bold;
+      }
+
+      #monthSelectionArrow {
+        float:left;
+        width: 0;
+        height: 0;
+        border-top: 25px solid transparent;
+        border-bottom: 25px solid transparent;
+        border-left: 25px solid #9a1e22;
+      }
+
+      #monthPicker ul li:nth-child(odd):hover {
+        cursor: pointer;
+      }
+
+      #hoursLabel {
+        margin-top:-35px;
+        width: 66%;
+        float:right;
+        margin-bottom:0px;
+      }
+
+      .littleDiv {
+        width:80%;
+        height:4px;
+        background-color:#fbfcfc;
+        margin:15px auto 15px auto; /*trbl*/
+        border-radius: 2px;
+      }
+
+      .bottomSpace {
+        margin-bottom:30px;
+      }
+
+      #tourBase {
+        display:block;
+        margin:auto;
+      }
+
+      #scheduleCon {
+        min-height: 257px;
+        padding:20px;
+        width: 65%;
+        background-color: #fbfcfc;
+        color: #445880;
+        float:right;
+      }
+
+      #scheduleCon p {
+        margin-bottom:0px;
+      }
+
+      .schedule {
+        font-size: 16px;
+        margin-bottom:10px;
+        margin-top:15px;
+        text-align: center;
+        color:#323233;
+      }
+
+      .miniDivider {
+        margin-top:5px;
+        margin-bottom:10px;
+        height: 3px;
+        background-color: #323233;
+      }
+
+      /*About page*/
+
+      #sunset {
+        width:100%;
+        height:auto;
+        margin-bottom:15px;
+      }
+
+      #sunsetDesktop {
+        display:none;
+      }
+
+      #lightHistory {
+        width:100%;
+        height:auto;
+      }
+
+      #birdPhoto {
+        width:100%;
+        height:auto;
+      }
+
+      #lighthouseBefore{
+        width:100%;
+        height:auto;
+      }
+
+      #lighthouseBeforeDesktop {
+        display:none;
+      }
+
+      #dividerThanks {
+        width:50%;
+        height:auto;
+        display:block;
+        margin:auto;
+      }
+
+      #cottageAfterPhoto {
+        float:right;
+        margin-left:22px;
+        margin-bottom:22px;
+        margin-right: 5%;
+      }
+
+      #lightKeeperCottage h2 {
+        clear:both;
+      }
+
+      #dividerThanks {
+        margin-bottom:20px;
+      }
+
+      #specialThanks {
+        text-align: center;
+      }
+
+      /* news */
+
+      #facebook {
+        float:left;
+        display: -webkit-inline-box;
+        margin: 0px 0px 0px 5%;
+      }
+
+      #youtube {
+        float: left;
+        display: -webkit-inline-box;
+        margin: 0px 5% 0px 0px;
+      }
+
+      .facebook {
+        color: #3b5998;
+      }
+
+      .facebook:hover {
+        transition:.2s;
+        color: #647fb7;
+      }
+
+      .youtube {
+        position:relative;
+        color: #bb0000;
+      }
+
+      .youtube:hover {
+        transition:.2s;
+        color: #ce6060;
+      }
+
+      #socialLinks {
+        overflow: hidden;
+      }
+
+      .seeMore {
+        font-size: 60px;
+      }
+
+      .socialText {
+        width:60%;
+        padding-top:5px;
+        padding-left:22px;
+      }
+
+      .socialTitle {
+        font-size: 20px;
+        line-height:10px;
+      }
+
+      .offMobile {
+        display:none;
+      }
+
+      #eventSection {
+        clear:both;
+      }
+
+      .events {
+        margin-top:20px;
+        margin-bottom:15px;
+      }
+
+      .eventDesc {
+        font-size:15px;
+        margin-bottom:5px;
+        line-height:20px;
+      }
+
+      .eventTime {
+        margin-bottom:10px;
+        font-size: 12px;
+        color: #515151;
+        padding: 0px 5%;
+      }
+
+      #pageChanger {
+        text-align: end;
+        overflow: hidden;
+      }
+
+      .pages p {
+        width:25%;
+        float:right;
+        text-align: center;
+        margin-top:10px;
+
+      }
+
+      #news {
+        text-align: center;
+      }
+
+      .newsTime {
+        margin-bottom: 15px;
+      }
+
+      .newsPhoto {
+        height:auto;
+        width:500px;
+        display: block;
+        margin:auto;
+      }
+
+      .post {
+        margin-top:30px;
+        margin-bottom:60px;
+      }
+
+      .post h2 {
+        margin-bottom:2px;
+      }
+
+      .postText {
+        max-width:502px;
+        margin: 15px auto 0px auto;/*trbl*/
+      }
+
+      #pageNewsChanger {
+        overflow: hidden;
+      }
+
+      .arrNext {
+        height:40px;
+        width:20px;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-left: 20px solid #9d1c25;
+        float:right;
+      }
+
+      .arrPrev {
+        height:40px;
+        width:20px;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-right: 20px solid #9d1c25;
+        float:right;
+      }
+
+      .arrNext:hover {
+        cursor:pointer;
+      }
+
+      .arrPrev:hover {
+        cursor:pointer;
+      }
+      /* contact */
+      .mapCon {
+        position: relative;
+        max-width:960px;
+        background-color: rgba(44,44,44,.12);
+        margin: 0 -6.31%;
+        padding: 0 5%;/*trbl*/
+      }
+
+      #map {
+        float:left;
+        display:block;
+        position: relative;
+        width:100%;
+        max-width: 100%;
+        padding:0px 5%;
+      }
+
+      .map-wrapper, .preload-wrapper { width: 100%;  height: 350px; }
+
+      button { cursor: pointer; }
+
+      .preload-wrapper {
+      	position: absolute;
+      	background-color: rgba(255, 255, 255, 0.85);
+      	border: 2px solid #ccc;
+      	z-index: 50;
+      	width: 98.5%;
+      	border-radius: 0px;
+      	left: 0;
+      	right: 0;
+      	display: block;
+      	margin: 0 auto;
+      	text-align: center;
+      	font-size: 1em;
+      	color: #CCC;
+
+      	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      	font-style: italic;
+
+      	pointer-events: none;
+      	transition: opacity 0.7s ease;
+      }
+
+      .hide-preloader {
+        opacity: 0;
+      }
+
+      .preload-wrapper i {
+        margin: 115px 0 20px;
+        font-size: 5.2em;
+      }
+
+      @keyframes animatedDots {
+          0% {
+            opacity: .1;
+          }
+
+          20% {
+            opacity: 1;
+          }
+
+          100% {
+            opacity: .1;
+          }
+      }
+
+      .loadingMessage span {
+          animation-name: animatedDots;
+          animation-duration: 1s;
+          animation-iteration-count: infinite;
+          animation-fill-mode: both;
+          font-size: 18px;
+      }
+
+      .loadingMessage span:nth-child(2) {
+          animation-delay: .3s;
+      }
+
+      .loadingMessage span:nth-child(3) {
+          animation-delay: .5s;
+      }
+
+      .geocode {
+        background-color: #445880;
+        color: #fbfcfc;
+        width: 50%;
+        height:50px;
+        border-radius: 7px;
+        border: none;
+        margin-right: 5%;
+        float:right;
+      }
+
+      #directionText {
+        width:40%;
+        float:right;
+        display:none;
+      }
+
+      #directionText label {
+        font-size: 12px;
+      }
+
+      #directionText input {
+        width: 100%;
+      }
+
+      #mobileDirections {
+        margin-top: 36px;
+        display: block;
+      }
+
+      .address {
+        width: 90%;
+        margin:auto auto 16px auto;
+      }
+
+      .stretcher {
+        clear:both;
+      }
+
+      #contactInfo {
+        float:left;
+        width:50%;
+        padding-left: 5%;
+      }
+
+      #contactInfo h2 {
+        padding: 0px;
+      }
+
+      #contactInfo p {
+        padding: 0px;
+      }
+
+      .field {
+        background-color: #fbfcfc;
+        border-radius: 10px;
+        border: solid 1px #2c2c2c;
+      }
+
+      .field::-webkit-input-placeholder {
+        color: #445880;
+      }
+
+      .field:-moz-placeholder { /* Firefox 18- */
+        color: #445880;
+      }
+
+      .field::-moz-placeholder {  /* Firefox 19+ */
+        color: #445880;
+      }
+
+      .field:-ms-input-placeholder {
+        color: #445880;
+      }
+
+      #emailField {
+        width:50%;
+        float:right;
+        padding-right:5%;
+      }
+
+      #submitButton {
+        background-color: #445880;
+        color: #fbfcfc;
+        width: 100%;
+        height:50px;
+        border-radius: 7px;
+        border: none;
+      }
+
+      /* Gallery */
+
+      #galleryPage p {
+        margin-bottom:35px;
+      }
+
+      .galleryCon {
+        list-style-type: none;
+        display: flex;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom:0px;
+      }
+
+      .galleryCon li:first-child {
+        padding-right:11px;
+      }
+
+      .galleryCon li:nth-of-type(3) {
+        padding-left:11px;
+      }
+
+      .galleryPhotos {
+        margin-bottom:11px;
+      }
+
+      #pop {
+        display: none;
+        height: 100%;
+        width: 100%;
+        background: rgba(011,011,011,.90);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        opacity: .0;
+      }
+
+      #closeButton {
+        height: 5%;
+        width: auto;
+        position: fixed;
+        top: 18px;
+        right: 18px;
+      }
+
+      #closeButton:hover {
+        cursor: pointer;
+      }
+
+      #fullPhotoInfo {
+        height: 82%;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top:50%;
+        transform: translateY(-50%);
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #mainImg {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        max-height: 80%;
+        width: auto;
+      }
+
+      #desc {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        max-height: 8%;
+        color: #f6f6f6;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      #cred {
+        display: block;
+        margin: 0 auto;
+        color: #7d7d7d;
+        text-align: center;
+        line-height: 15px;
+      }
+
+      #nextGallButton {
+        transition: .3s;
+        position: absolute;
+        right:0;
+        top:50%;
+        transform:translateY(-50%);
+        width:60px;
+        height:25%;
+        background-color: #f6f6f6;
+        border-radius: 5px 0px 0px 5px;
+      }
+
+      #nextGallButton:hover {
+        transition: .5s;
+        width:75px;
+        cursor: pointer;
+      }
+
+      #arrowRight {
+        width: 0;
+        height: 0;
+        position: absolute;
+        left:20%;
+        top:50%;
+        transform:translateY(-50%);
+        border-top: 40px solid transparent;
+        border-bottom: 40px solid transparent;
+        border-left: 40px solid #323233;
+      }
+
+      #prevGallButton {
+        transition: .3s;
+        position: absolute;
+        left:0;
+        top:50%;
+        transform:translateY(-50%);
+        width:60px;
+        height:25%;
+        background-color: #f6f6f6;
+        border-radius: 0px 5px 5px 0px;
+      }
+
+      #prevGallButton:hover {
+        transition: .5s;
+        width:75px;
+        cursor: pointer;
+      }
+
+      #arrowLeft {
+        width: 0;
+        height: 0;
+        position: absolute;
+        top:50%;
+        right:20%;
+        transform:translateY(-50%);
+        border-top: 40px solid transparent;
+        border-bottom: 40px solid transparent;
+        border-right:40px solid #323233;
+      }
+
+      /*donate*/
+
+      #donationChart {
+        width:90%;
+        margin:auto;
+      }
+
+
+/*Medium Screens*/
+    @media only screen and (min-width: 641px) and (max-width: 959px){
+
+    .mobileOnly {
+      display:block;
+    }
+
+    #timeCon {
+      display:none;
+    }
+
+    #siteCon {
+      padding:34vh 5% 50px 5%;
+      margin:0 3% 0 3%; /*trbl*/
+    }
+
+    #siteCon p {
+      font-size: 0.938em;
+      line-height: 20px;
+      padding: 0px;
+    }
+
+    #siteCon h1 {
+      padding: 0px;
+    }
+
+    #siteCon h2 {
+      padding: 0px;
+    }
+
+    #siteCon h3 {
+      padding: 0px;
+    }
+
+    .divider {
+    width:100%;
+    }
+
+    #contactArea {
+      width:48%;
+      float:left;
+      padding: 0px;
+      top:45px;
+    }
+
+    #rates {
+      width:52%;
+      padding-right:5%;
+      float: left;
+    }
+
+    #ratesDivider {
+      left: 46%;
+    }
+
+    #callMe {
+      left: 53%;
+    }
+
+    /*about*/
+    #cottageAfterPhoto {
+      margin-right: 0px;
+    }
+
+    /*contact page*/
+
+    .address {
+      width: 100%;
+    }
+
+    .geocode {
+      margin-right: 0px;
+    }
+
+    #contactInfo {
+      padding: 0px;
+    }
+
+    #emailField {
+      padding: 0px;
+    }
+
+    /*donate*/
+
+    #donationChart {
+      width:100%;
+    }
+
+    /*News*/
+
+    #facebook {
+      width:45%;
+      float:left;
+      margin: 25px 0px;
+    }
+
+    #youtube {
+      width:45%;
+      float:right;
+      margin: 25px 0px;
+    }
+
+    .eventTime {
+      padding: 0px;
+    }
+
+    .offMobile {
+      display:block;
+    }
+
+    /*booking*/
+
+    #bookingList ul {
+      padding: 0px;
+    }
+
+    #monthPicker ul li {
+      font-size: 17px;
+    }
+}
+
+/* Largest Screens */
+    @media only screen and (min-width: 960px) {
+
+      .mobileOnly {
+        display:none;
+      }
+
+      #timeCon {
+        display: block;
+        max-width: 288px;
+        background-color: rgba(228, 228, 228, 0.68);
+        text-align: center;
+      }
+
+      /* Home page */
+      #siteCon {
+        max-width:960px;
+        background-color:#f6f6f6;
+        margin:auto;
+        padding: 60px;
+      }
+
+      #siteCon p {
+      padding: 0px;
+      }
+
+      #siteCon h1 {
+        padding: 0px;
+      }
+
+      #siteCon h2 {
+        padding: 0px;
+      }
+
+      #siteCon h3 {
+        padding: 0px;
+      }
+
+      #topBar {
+        position: absolute;
+        top:0;
+        height:45px;
+        width:100%;
+        border-bottom: solid 2px rgba(44,44,44,.95);
+        background-color: rgba(44,44,44,.85);
+        z-index: 4;
+      }
+
+      #topBar ul {
+        display:block;
+        max-width:840px;
+        margin:auto;
+      }
+
+      #topBar ul li {
+        display: inline-block;
+        margin: 0;
+        background-repeat: no-repeat;
+        list-style: none;
+        float:right;
+      }
+
+      #topBar ul li:first-child {
+        margin-left:11px;
+      }
+
+      .social {
+        position:relative;
+        z-index: 5;
+        font-size:40px;
+        line-height: 45px;
+      }
+
+      #mobileNav {
+        display: none;
+      }
+
+      #navCon {
+        height:30%;
+        min-height: 357px;
+        margin:auto;
+        padding: 85px 50px 48px 50px; /*trbl*/
+        text-decoration: none;
+        position:relative;
+        font-size: 20px;
+        background-color: rgba(217,223,233,.85);
+        border-bottom:none;
+      }
+
+      #bannerCon {
+        position: relative;
+        width:960px;
+        background-image: url('../images/chantryBanner.jpg');
+        margin:auto;
+      }
+
+      #bannerImg {
+        display: block;
+        position:absolute;
+        left:0;
+        top:0;
+        z-index:-1;
+        opacity:.15;
+      }
+
+      #navCon a {
+        color: #2c2c2c;
+        border-bottom: solid 0px rgba(0,0,0,.0);
+        padding-bottom:1px;
+        transition: .2s ease;
+        -webkit-transition: .2s ease;
+      }
+
+      #navCon a.links:hover {
+        border-bottom: solid 3px #445880;
+        padding-bottom:2px;
+        transition: .2s ease;
+        -webkit-transition: .2s ease;
+      }
+
+      #navCon ul {
+        list-style-type: none;
+      }
+
+      #navCon ul li {
+        text-align: center;
+        display: inline-block;
+      }
+
+      #logo {
+        height:auto;
+        width: 20%;
+        margin:auto;
+        left: 40%;
+        padding:0px;
+      }
+
+      #navLeft {
+        width: 34%;
+        padding-right:22px;
+        margin-left:60px;
+        position: absolute;
+        top:53%;
+        left:0;
+        display: flex;
+        display: -webkit-flex; /* Safari */
+        -webkit-justify-content: space-between; /* Safari 6.1+ */
+        justify-content: space-between;
+      }
+
+      #navRight {
+        width: 34%;
+        padding-left:22px;
+        margin-right:60px;
+        position: absolute;
+        top:53%;
+        right:0;
+        text-align: right;
+        display: flex;
+        display: -webkit-flex; /* Safari */
+        -webkit-justify-content: space-between; /* Safari 6.1+ */
+        justify-content: space-between;
+      }
+
+      #aboutDropDown {
+        display:none;
+        position:absolute;
+        left:0;
+        background-color: #445880;
+        top:91%;
+        height:96px;
+        width:213px;
+        font-size: 22px;
+        padding: 15px 5px;
+        margin-left: 18px;
+      }
+
+      #aboutDropDown.visible {
+        display:block;
+      }
+
+      #aboutDropDown li {
+        display:inline-block;
+        transition:.2s;
+        width:100%;
+        background-color: #516488;
+        margin-bottom:5px;
+        font-size: 20px;
+      }
+
+      #aboutDropDown li:hover {
+        display:inline-block;
+        transition:.2s;
+        background-color: #95a1b7;
+        text-decoration: none;
+      }
+
+      #aboutDropDown li a {
+        display:block;
+        width:100%;
+        color:#fbfcfc;
+      }
+
+      .video {
+        max-width:960px;
+        margin: 0px -60px 36px;
+        padding: 0px;/*trbl*/
+        overflow:hidden;
+      }
+
+      .playButton {
+        left:46%;
+      }
+
+      #flexCon {
+        width:33%;
+        max-width:296px;
+        margin:0px;
+        float:left;
+      }
+
+      #flexCon li:nth-child(1) {
+        padding-right: 0px;
+        padding-bottom:22px;
+      }
+
+      #flexCon li:nth-child(2) {
+        padding-left: 0px;
+      }
+
+      .photos {
+        width: 100%;
+      }
+
+      #touringBlurb {
+        width:64.3%;
+        margin-bottom:30px;
+        float:right;
+      }
+
+      #touringBlurb h2 {
+        margin-top:0px;
+        padding: 0px;
+      }
+
+      #touringBlurb p {
+        margin-bottom: 22px;
+        height:228px;
+      }
+
+      .divider {
+        clear:both;
+        width:100%;
+      }
+
+      #rates {
+        width:52%;
+        float:left;
+      }
+
+      #rates h2 {
+        margin-top:2px;
+      }
+
+      #contactArea {
+        width:48%;
+        float:left;
+        padding: 0px;
+      }
+
+      #scheduleButton {
+        top:57%;
+        width:51%;
+        padding:3%;
+      }
+
+      #ratesDivider {
+        left:56%;
+      }
+
+      #callMe {
+        top:12%;
+        left:61%;
+        font-size:20px;
+      }
+
+      .siteConStretcher {
+        clear:both;
+      }
+
+      #footersOcean {
+        position:relative;
+        z-index: 2;
+        margin-top:-30px;
+        margin-left: auto;
+        margin-right:auto;
+        background-image: url("../images/desktopWaves.png");
+        background-size: 630px auto;
+        background-repeat: repeat-x;
+        height:305px;
+      }
+
+      #ocean {
+        display: none;
+      }
+
+      #desktopOcean {
+        display: block;
+      }
+
+      #otherSites ul {
+        margin-top:-140px;
+      }
+
+      .siteLinks {
+        width:140px;
+      }
+
+      .circle {
+        margin-left: auto;
+        margin-right: auto;
+        height:100px;
+        width:100px;
+      }
+
+      .siteLinks p {
+        margin-top:35px;
+        font-size: 12px;
+      }
+
+
+      #saugeen {
+        top:0px;
+        left:0;
+        font-size: 14px; /*Saugeen shores*/
+        line-height: 16px;
+      }
+
+      #museum {
+        top:-23px;
+        left:0;
+        font-size: 13px; /*Bruce county museum & cultural centre*/
+        line-height: 15px;
+      }
+
+      #lighthouse {
+        top:-13px;
+        left:8%;
+        font-size: 13px; /*Bruce coast lighthouse tour*/
+        line-height:15px;
+      }
+
+      #explore {
+        top:-4px;
+        left:20%;
+        font-size: 13px; /*Explore the Bruce*/
+        line-height: 15px;
+      }
+
+      #tennis {
+        top:10px;
+        left:7%;
+        font-size: 11px; /*Southhampton tennis club*/
+        line-height: 12px;
+      }
+
+      #boatCon {
+        max-width:960px;
+        margin:auto;
+        margin-top:-210px;
+      }
+
+      #boat {
+        position: absolute;
+        z-index:-1;
+        display:block;
+        width:20%;
+        max-width:218px;
+        height:auto;
+      }
+
+      #footerCon {
+        max-width:960px;
+        margin: auto;
+      }
+
+      #frontWaves {
+        max-width:960px;
+        margin:auto;
+        display: block;
+      }
+
+      #pageLinks {
+        display: block;
+      }
+
+      #footerNav a {
+        color: #fbfcfc;
+      }
+
+      #footerNav ul {
+        width:50%;
+        margin-top:0px;
+        display:inline;
+        display:-webkit-inline-box;
+        float:left;
+      }
+
+      #footerNav ul li {
+        list-style-type: none;
+        color: #fbfcfc;
+        line-height: 26px;
+      }
+
+      #footerNav ul li:nth-child(odd) {
+        font-size: 16px;
+      }
+
+      #footerNav ul li:nth-child(even) {
+        margin-left:10px;
+        margin-right:10px;
+      }
+
+      #footerNav p {
+        text-align:right;
+        width:25%;
+        float:right;
+      }
+
+      /* Gallery */
+
+      #gallery:hover img:not(:hover) {
+        transition: .4s;
+        opacity: 0.75;
+      }
+
+      .galleryCon li:first-child {
+        padding-right:22px;
+      }
+
+      .galleryCon li:nth-of-type(3) {
+        padding-left:22px;
+      }
+
+      .galleryPhotos {
+        margin-bottom:22px;
+      }
+
+      .galleryPhotos img:hover {
+        cursor: pointer;
+      }
+
+      /* Booking */
+
+      #bookingList ul {
+        padding: 0px;
+      }
+
+      #chantryIslandPhoto {
+        width:100%;
+      }
+
+      #arrivalText {
+        width:70%;
+        float:left;
+      }
+
+      #arrivalText h2 {
+        margin-top: -7px;
+      }
+
+      #tourBase {
+        width:30%;
+        padding-left: 22px;
+      }
+
+      #monthPicker ul li {
+        font-size: 17px;
+      }
+
+      /* About */
+
+      #sunset {
+        display:none;
+      }
+
+      #sunsetDesktop {
+        display:block;
+        width:100%;
+        height:auto;
+        margin-bottom:15px;
+      }
+
+      #lightHouseHistory {
+        width: 50%;
+        padding-left:11px;
+        float:right;
+        margin-bottom:15px;
+      }
+
+      #lightHouseHistory h2 {
+        margin-top:15px;
+      }
+
+      #BirdSanc {
+        width:50%;
+        padding-right: 11px;
+        float:left;
+        margin-bottom:15px;
+      }
+
+      #BirdSanc h2 {
+        margin-top:15px;
+      }
+
+      #lighthouseBefore{
+        display:none;
+      }
+
+      #lighthouseBeforeDesktop {
+        display: block;
+      }
+
+      #cottageAfterPhoto {
+        margin-right: 0px;
+      }
+
+      #dividerThanks {
+        clear:both;
+        width:50%;
+        max-width:207px;
+      }
+
+      /* Contact */
+
+      .mapCon {
+        max-width:960px;
+        margin: 0 -60px;
+        padding: 0 60px;/*trbl*/
+      }
+
+      #map {
+        max-width: 55%;
+        padding:0px;
+      }
+
+      #directionText {
+        margin-top:5%;
+        display:block;
+      }
+
+      #mobileDirections {
+        display:none;
+      }
+
+      #contactInfo {
+        position:relative;
+        height:411px;
+        padding: 0px;
+        width:28%;
+      }
+
+      #contactInfo p {
+        font-size:20px;
+        margin-bottom:3px;
+      }
+
+      #contactInfo a {
+        font-size:1.5em;
+      }
+
+      #mailing {
+        position: absolute;
+        bottom:0;
+      }
+
+      #mailing p {
+        font-size: 14px;
+        line-height: 24px;
+      }
+
+      #emailField {
+        width:44%;
+        padding: 0px;
+      }
+
+      .geocode {
+        margin-right: 0px;
+      }
+
+      /* Donation */
+
+      #orderAddress {
+        margin-bottom: 30px;
+      }
+
+      #orderAddress p {
+        font-size: 14px;
+        line-height: 24px;
+      }
+
+      #donationChart {
+        width:100%;
+      }
+
+      #donationChart th {
+        text-align: left;
+      }
+
+      /*News*/
+
+      #facebook {
+        width:45%;
+        float:left;
+        margin: 25px 0px;
+      }
+
+      #youtube {
+        width:45%;
+        float:right;
+        margin: 25px 0px;
+      }
+
+      .eventTime {
+        padding: 0px;
+      }
+
+      .offMobile {
+        display:block;
+      }
+
+    }
